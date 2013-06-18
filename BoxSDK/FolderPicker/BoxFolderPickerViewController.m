@@ -198,17 +198,17 @@
     
     //UI Setup
     self.view.backgroundColor = [UIColor whiteColor];
-    [self.navigationController.navigationBar setTitleTextAttributes:
-     [NSDictionary dictionaryWithObjectsAndKeys:
-      [UIColor blackColor], UITextAttributeTextColor,
-      [UIColor blackColor], UITextAttributeTextShadowColor, 
-      [NSValue valueWithUIOffset:UIOffsetMake(0, 0)], UITextAttributeTextShadowOffset,
-      [UIFont boldSystemFontOfSize:16.0], UITextAttributeFont, 
-      nil]];
-    
-    [self.navigationController.navigationBar setTitleVerticalPositionAdjustment:2.0 forBarMetrics:UIBarMetricsDefault];
-    
-    // Back button 
+//    [self.navigationController.navigationBar setTitleTextAttributes:
+//     [NSDictionary dictionaryWithObjectsAndKeys:
+//      [UIColor blackColor], UITextAttributeTextColor,
+//      [UIColor blackColor], UITextAttributeTextShadowColor, 
+//      [NSValue valueWithUIOffset:UIOffsetMake(0, 0)], UITextAttributeTextShadowOffset,
+//      [UIFont boldSystemFontOfSize:16.0], UITextAttributeFont, 
+//      nil]];
+//    
+//    [self.navigationController.navigationBar setTitleVerticalPositionAdjustment:2.0 forBarMetrics:UIBarMetricsDefault];
+//    
+    // Back button
     UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Back", @"Title : cell allowing the user to go back in the viewControllers tree") style:UIBarButtonItemStyleBordered target:nil action:nil];
     [back setBackButtonBackgroundImage:[[UIImage  imageFromBoxSDKResourcesBundleWithName:@"back-normal"] resizableImageWithCapInsets:UIEdgeInsetsMake(16.0, kStretchBackButtonLeftOffset, 16.0, kStretchBackButtonRightOffset)] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     [back setBackButtonBackgroundImage:[[UIImage  imageFromBoxSDKResourcesBundleWithName:@"back-tap"] resizableImageWithCapInsets:UIEdgeInsetsMake(16.0, kStretchBackButtonLeftOffset, 16.0, kStretchBackButtonRightOffset)] forState:UIControlStateSelected barMetrics:UIBarMetricsDefault];   
