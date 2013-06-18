@@ -200,9 +200,9 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self.navigationController.navigationBar setTitleTextAttributes:
      [NSDictionary dictionaryWithObjectsAndKeys:
-      [UIColor whiteColor], UITextAttributeTextColor, 
+      [UIColor blackColor], UITextAttributeTextColor,
       [UIColor blackColor], UITextAttributeTextShadowColor, 
-      [NSValue valueWithUIOffset:UIOffsetMake(0, -1)], UITextAttributeTextShadowOffset, 
+      [NSValue valueWithUIOffset:UIOffsetMake(0, 0)], UITextAttributeTextShadowOffset,
       [UIFont boldSystemFontOfSize:16.0], UITextAttributeFont, 
       nil]];
     
