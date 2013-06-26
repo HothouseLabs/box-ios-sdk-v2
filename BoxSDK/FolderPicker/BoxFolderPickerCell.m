@@ -133,6 +133,7 @@
     
     [self.helper itemNeedsAPICall:self.item cachePath:cachedThumbnailPath completion:^(BOOL needsAPICall, UIImage *cachedImage) {
 
+		// TODO: different icon for folders that sync, but [BoxFolder -syncState] always return nil so can't be done?
 		self.thumbnailImageView.image = cachedImage ? cachedImage : [UIImage imageNamed:@"folder_icon.png"];
 
         // Checking if we need to download the thumbnail for the current item
