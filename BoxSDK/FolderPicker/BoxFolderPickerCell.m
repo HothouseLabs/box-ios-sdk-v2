@@ -132,14 +132,14 @@
     NSString *cachedThumbnailPath = [self.cachePath stringByAppendingPathComponent:self.item.modelID];
     
     [self.helper itemNeedsAPICall:self.item cachePath:cachedThumbnailPath completion:^(BOOL needsAPICall, UIImage *cachedImage) {
-        
-        self.thumbnailImageView.image = cachedImage;
-        
-        // Checking if we need to download the thumbnail for the current item 
+
+		self.thumbnailImageView.image = cachedImage ? cachedImage : [UIImage imageNamed:@"folder_icon.png"];
+
+        // Checking if we need to download the thumbnail for the current item
         if ([self.helper shouldDiplayThumbnailForItem:self.item] && needsAPICall && showThumbnails) {
             __block BoxFolderPickerCell *cell = self;
             __block BoxItem *currentItem = self.item;
-            
+
             [self.helper thumbnailForItem:self.item cachePath:self.cachePath refreshed:^(UIImage *image) {
                 if (image && cell.item == currentItem) {
                     dispatch_async(dispatch_get_main_queue(), ^{
@@ -159,7 +159,7 @@
     
     // Drawing name label
     if (self.item.name) {
-        // Positionnning the name label by offset from the image
+        // Positioning the name label by offset from the image
         r.origin.x += kImageViewSide + kImageToLabelOffsetX;
         r.origin.y += 4.0;
         r.size.height = kNameStringHeight;

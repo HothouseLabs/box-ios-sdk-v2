@@ -82,9 +82,7 @@
 
 - (BOOL)shouldDiplayThumbnailForItem:(BoxItem *)item
 {
-    NSString *extension = [item.name pathExtension];
-    
-    return [extension isEqualToString:@"png"] || [extension isEqualToString:@"jpg"] || [extension isEqualToString:@"jpeg"] || [extension isEqualToString:@"JPG"]; 
+	return [item isKindOfClass:[BoxFile class]];
 }
 
 - (void)itemNeedsAPICall:(BoxItem *)item cachePath:(NSString *)cachePath completion:(BoxNeedsAPICallCompletionBlock)completionBlock

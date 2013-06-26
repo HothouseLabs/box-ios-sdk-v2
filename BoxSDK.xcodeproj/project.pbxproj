@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8A80F35177A715E00F95834 /* folder_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B8A80F34177A715E00F95834 /* folder_icon.png */; };
 		C5152CFE17541B66007A5C0A /* BoxFolderPickerHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = C5152CF817541B66007A5C0A /* BoxFolderPickerHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C5152CFF17541B66007A5C0A /* BoxFolderPickerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C5152CF917541B66007A5C0A /* BoxFolderPickerHelper.m */; };
 		C5152D0017541B66007A5C0A /* BoxFolderPickerTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C5152CFA17541B66007A5C0A /* BoxFolderPickerTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -217,6 +218,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B8A80F34177A715E00F95834 /* folder_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = folder_icon.png; sourceTree = "<group>"; };
 		C5152CF817541B66007A5C0A /* BoxFolderPickerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoxFolderPickerHelper.h; sourceTree = "<group>"; };
 		C5152CF917541B66007A5C0A /* BoxFolderPickerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoxFolderPickerHelper.m; sourceTree = "<group>"; };
 		C5152CFA17541B66007A5C0A /* BoxFolderPickerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoxFolderPickerTableViewController.h; sourceTree = "<group>"; };
@@ -466,6 +468,7 @@
 		C5152CF717541B66007A5C0A /* FolderPicker */ = {
 			isa = PBXGroup;
 			children = (
+				B8A80F34177A715E00F95834 /* folder_icon.png */,
 				C5152CF817541B66007A5C0A /* BoxFolderPickerHelper.h */,
 				C5152CF917541B66007A5C0A /* BoxFolderPickerHelper.m */,
 				C5152CFA17541B66007A5C0A /* BoxFolderPickerTableViewController.h */,
@@ -1112,6 +1115,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E470435A16D41DC500FED29A /* InfoPlist.strings in Resources */,
+				B8A80F35177A715E00F95834 /* folder_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
