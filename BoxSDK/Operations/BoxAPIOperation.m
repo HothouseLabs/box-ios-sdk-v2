@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Box. All rights reserved.
 //
 
+#import <objc/runtime.h>
 #import "BoxAPIOperation.h"
 
 #import "BoxSDKErrors.h"
@@ -237,6 +238,11 @@ static BOOL BoxOperationStateTransitionIsValid(BoxAPIOperationState fromState, B
 
 + (void)globalAPIOperationNetworkThreadEntryPoint:(id)sender
 {
+	// don't actually run in test mode
+	if (objc_getClass("SenTestCase")) {
+		return;
+	}
+
     [NSThread currentThread].name = @"Box API Operation Thread";
     BOXLog(@"%@ started", [NSThread currentThread]);
 
