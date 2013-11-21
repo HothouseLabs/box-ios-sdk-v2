@@ -8,6 +8,8 @@
 
 #import "BoxFoldersRequestBuilderTests.h"
 
+#import "BoxSDKConstants.h"
+
 @implementation BoxFoldersRequestBuilderTests
 
 - (void)setUp
@@ -39,7 +41,7 @@
 - (void)testThatSettingContentCreatedAtInBodyDictionaryWhenPropertyIsSet
 {
     NSDate *const birthdate = [NSDate dateWithTimeIntervalSince1970:347398722];
-    NSString *const birthdateISO8601String = @"1981-01-03T11:38:42Z";
+    NSString *const birthdateISO8601String = @"1981-01-03T19:38:42Z";
     builder.contentCreatedAt = birthdate;
     STAssertEqualObjects(@{BoxAPIObjectKeyContentCreatedAt : birthdateISO8601String}, builder.bodyParameters, @"content created at should be converted to iso 86012 string and included in body dictionary");
 }
@@ -47,7 +49,7 @@
 - (void)testThatSettingContentModifiedAtInBodyDictionaryWhenPropertyIsSet
 {
     NSDate *const birthdate = [NSDate dateWithTimeIntervalSince1970:347398722];
-    NSString *const birthdateISO8601String = @"1981-01-03T11:38:42Z";
+    NSString *const birthdateISO8601String = @"1981-01-03T19:38:42Z";
     builder.contentModifiedAt = birthdate;
     STAssertEqualObjects(@{BoxAPIObjectKeyContentModifiedAt : birthdateISO8601String}, builder.bodyParameters, @"content modified at should be converted to iso 86012 string and included in body dictionary");
 }
@@ -55,9 +57,9 @@
 - (void)testThatContentCreatedAtAndContentModifiedAtInBodyDictionaryWhenBothPropertiesAreSet
 {
     NSDate *const birthdate = [NSDate dateWithTimeIntervalSince1970:347398722];
-    NSString *const birthdateISO8601String = @"1981-01-03T11:38:42Z";
+    NSString *const birthdateISO8601String = @"1981-01-03T19:38:42Z";
     NSDate *const superBowlXLVI = [NSDate dateWithTimeIntervalSince1970:1328493600];
-    NSString *const superBowlXLVIISO8601String = @"2012-02-05T18:00:00Z";
+    NSString *const superBowlXLVIISO8601String = @"2012-02-06T02:00:00Z";
     builder.contentCreatedAt = birthdate;
     builder.contentModifiedAt = superBowlXLVI;
     NSDictionary *expectedBody = @{BoxAPIObjectKeyContentCreatedAt : birthdateISO8601String,

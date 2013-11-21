@@ -2,7 +2,7 @@
 //  BoxFoldersResourceManager.h
 //  BoxSDK
 //
-//  Created bon 3/12/13.
+//  Created on 3/12/13.
 //  Copyright (c) 2013 Box. All rights reserved.
 //
 
@@ -15,7 +15,7 @@
 extern NSString *const BoxAPIFolderIDRoot;
 extern NSString *const BoxAPIFolderIDTrash;
 
-typedef void (^BoxFolderBlock)(BoxFolder * folder);
+typedef void (^BoxFolderBlock)(BoxFolder *folder);
 
 @class BoxFoldersRequestBuilder;
 
@@ -41,7 +41,7 @@ typedef void (^BoxFolderBlock)(BoxFolder * folder);
  * ======================
  * This class defines the `BoxFolderBlock` type for successful API calls that return a BoxFolder object:
  *
- * <pre><code>typedef void (^BoxFolderBlock)(BoxFolder * folder);</code></pre>
+ * <pre><code>typedef void (^BoxFolderBlock)(BoxFolder *folder);</code></pre>
  *
  * Constants
  * =========
