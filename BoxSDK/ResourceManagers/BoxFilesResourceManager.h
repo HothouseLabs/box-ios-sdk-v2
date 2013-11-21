@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Box. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
 #import "BoxAPIResourceManager.h"
 #import "BoxAPIJSONOperation.h" // imported for BoxAPIJSONFailureBlock typedef
 #import "BoxAPIMultipartToJSONOperation.h"
@@ -14,7 +15,7 @@
 @class BoxFile;
 @class BoxFilesRequestBuilder;
 
-typedef void (^BoxFileBlock)(BoxFile * folder);
+typedef void (^BoxFileBlock)(BoxFile *file);
 
 typedef enum {
     BoxThumbnailSize32  = 32,
@@ -42,7 +43,7 @@ typedef enum {
  * ======================
  * This class defines the `BoxFileBlock` type for successful API calls that return a BoxFile object:
  *
- * <pre><code>typedef void (^BoxFileBlock)(BoxFile * folder);</code></pre>
+ * <pre><code>typedef void (^BoxFileBlock)(BoxFile *file);</code></pre>
  *
  */
 @interface BoxFilesResourceManager : BoxAPIResourceManager

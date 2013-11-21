@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
 
 #import "BoxAPIQueueManager.h"
 
@@ -56,6 +55,12 @@ extern NSString *const BoxOAuth2AuthenticationErrorKey;
  * - redirectURIString
  * - performRefreshTokenGrant
  * - isAuthorized
+ *
+ * Service Settings on Box
+ * =======================
+ * **Note**: When setting up your service on Box, leave the OAuth2 reditrect URI blank.
+ * The SDK will provide a custom redirect URI when issuing OAuth2 calls; doing so requires
+ * that no redirect URI be set in your service settings.
  */
 @interface BoxOAuth2Session : NSObject
 

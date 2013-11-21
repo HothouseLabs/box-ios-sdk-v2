@@ -5,6 +5,8 @@
 //  Created on 2/19/13.
 //  Copyright (c) 2013 Box. All rights reserved.
 //
+//  NOTE: this file is a mirror of BoxCocoaSDK/BoxCocoaSDK.m. Changes made here should be reflected there.
+//
 
 #import "BoxSDK.h"
 #import "BoxSDKConstants.h"
@@ -19,6 +21,7 @@
 @synthesize queueManager = _queueManager;
 @synthesize foldersManager = _foldersManager;
 @synthesize filesManager = _filesManager;
+@synthesize usersManager = _usersManager;
 
 #pragma mark - Globally accessible API singleton instance
 + (BoxSDK *)sharedSDK
@@ -47,6 +50,8 @@
         sharedBoxSDK.filesManager.uploadAPIVersion = BoxAPIUploadAPIVersion;
 
         sharedBoxSDK.foldersManager = [[BoxFoldersResourceManager alloc] initWithAPIBaseURL:BoxAPIBaseURL OAuth2Session:sharedBoxSDK.OAuth2Session queueManager:sharedBoxSDK.queueManager];
+
+        sharedBoxSDK.usersManager = [[BoxUsersResourceManager alloc] initWithAPIBaseURL:BoxAPIBaseURL OAuth2Session:sharedBoxSDK.OAuth2Session queueManager:sharedBoxSDK.queueManager];
     });
 
     return sharedBoxSDK;
@@ -60,6 +65,7 @@
     // managers
     self.filesManager.APIBaseURL = APIBaseURL;
     self.foldersManager.APIBaseURL = APIBaseURL;
+    self.usersManager.APIBaseURL = APIBaseURL;
 }
 
 - (BoxFolderPickerViewController *)folderPickerWithRootFolderID:(NSString *)rootFolderID 
