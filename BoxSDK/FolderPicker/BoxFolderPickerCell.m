@@ -105,6 +105,7 @@
     // Load thumbnail via the API if necessary
     [self.helper itemNeedsAPICall:self.item cachePath:cachedThumbnailPath completion:^(BOOL needsAPICall, UIImage *cachedImage) {
         self.imageView.image = [cachedImage imageWith2XScaleIfRetina];
+	self.thumbnailImageView.image = cachedImage ? cachedImage : [UIImage imageNamed:@"folder_icon.png"];
 
         // Checking if we need to download the thumbnail for the current item
         if ([self.helper shouldDiplayThumbnailForItem:self.item] && needsAPICall && showThumbnails)
